@@ -1,0 +1,50 @@
+name: md-to-pdf
+version: 1.0.0
+description: AI-powered academic Markdown to PDF converter with IEEE/ACM/IMMC templates
+author: cuitao2046
+
+entry: prompt.md
+
+inputs:
+  - name: input_file
+    type: file
+    description: Path to the Markdown file to convert
+    required: true
+  - name: template
+    type: string
+    description: "CSS template to use: default, ieee, acm, immc"
+    default: default
+  - name: toc
+    type: boolean
+    description: Generate table of contents
+    default: true
+  - name: pagebreak
+    type: string
+    description: "Page break mode: none (conference), academic (journal), chapter (thesis)"
+    default: none
+
+outputs:
+  - type: file
+    description: PDF file generated in the same directory as the input file
+
+tools:
+  - name: convert
+    command: node tools/convert.js
+
+prompts:
+  polish: prompts/polish.md
+  review: prompts/review.md
+
+permissions:
+  - shell
+  - file_read
+  - file_write
+
+dependencies:
+  node: ">=14"
+
+templates:
+  - ieee
+  - acm
+  - immc
+  - default

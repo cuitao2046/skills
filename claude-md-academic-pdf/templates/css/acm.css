@@ -1,0 +1,67 @@
+/* ACM 论文风格 CSS */
+body {
+  font-family: "Times New Roman", serif;
+  font-size: 11pt;
+  line-height: 1.25;
+  margin: 2cm;
+}
+
+h1 {
+  font-size: 22pt;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 16pt;
+  font-weight: bold;
+  margin-top: 1.2em;
+}
+
+h3 {
+  font-size: 13pt;
+  font-weight: bold;
+  margin-top: 1em;
+}
+
+p {
+  text-align: justify;
+  margin: 0.5em 0;
+}
+
+img {
+  display: block;
+  margin: 0.5em auto;
+  max-width: 100%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+th, td {
+  padding: 0.2em;
+  text-align: center;
+}
+
+code, pre {
+  font-family: Consolas, monospace;
+  font-size: 10pt;
+}
+
+.toc {
+  page-break-after: always;
+}
+
+
+/* Page break support */
+.page-break {
+  page-break-before: always;
+}

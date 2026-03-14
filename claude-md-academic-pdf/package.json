@@ -1,0 +1,37 @@
+{
+  "name": "claude-md-academic-pdf",
+  "version": "1.0.0",
+  "description": "AI-powered Academic Markdown to PDF Converter",
+  "main": "tools/convert.js",
+  "bin": {
+    "md-to-pdf": "./tools/convert.js"
+  },
+  "scripts": {
+    "convert": "node tools/convert.js",
+    "test": "node tools/convert.js examples/conference-paper.md"
+  },
+  "dependencies": {
+    "md-to-pdf": "^5.2.5",
+    "fs-extra": "^11.2.0",
+    "markdown-it": "^14.0.0",
+    "markdown-it-anchor": "^9.0.0",
+    "markdown-it-table-of-contents": "^0.6.0",
+    "@mdit/plugin-katex": "^0.25.1",
+    "markdown-it-footnote": "^3.0.3",
+    "mermaid": "^11.0.0",
+    "citation-js": "^0.7.10"
+  },
+  "keywords": [
+    "claude",
+    "skill",
+    "markdown",
+    "pdf",
+    "academic",
+    "paper",
+    "ieee",
+    "acm",
+    "immc"
+  ],
+  "author": "cuitao2046",
+  "license": "MIT"
+}
